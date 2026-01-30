@@ -1,0 +1,8 @@
+daemonset:
+  enabled: true
+
+agent:
+  fleet:
+    enabled: true
+    url: "https://2f25ce9e2b654c5381560b9929f4b321.fleet.westeurope.azure.elastic-cloud.com:443"
+    enrollmentToken: "ajR2dnpwWUI5c0VhUDItSDdDekw6ZFhTMEtzeW44WmppcXgtdnhSZy1RQQ=="
