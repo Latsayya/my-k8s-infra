@@ -1,0 +1,22 @@
+name: Helm CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  helm-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install Helm
+      uses: azure/setup-helm@v4
+
+    - name: Add Elastic Helm Repo
+      run: helm repo add elastic https://helm.elastic.co
+
+    - name: Helm lint
+      run: helm lint elastic/elastic-agent -f helm/elastic-agent/values.yaml
