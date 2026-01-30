@@ -1,1 +1,1 @@
-# -elastic-k8s-gitops
+# elastic-k8s-gitops
